@@ -1,6 +1,11 @@
 @mixin shadow-normal {
     box-shadow: 0 2.5rem 4rem rgba($color-black, .25);
 }
+
+@mixin shadow-sharp {
+    box-shadow: 0 2.5rem 8rem rgba($color-black, .35);
+}
+
 @mixin clear-fix { //to cater the width collapse issue when floats
     &::after{
         content: "";

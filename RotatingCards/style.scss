@@ -13,9 +13,10 @@
     height: 35rem;
 
     &__side {
+        @include shadow-sharp;
         height: 35rem;
         border-radius: 15px;
-        transition: all 0.8s;
+        transition: all 0.8s ease;
         backface-visibility: hidden;
         position: absolute;
         top: 0;
@@ -23,10 +24,8 @@
         width: 80%;
 
         &--front{
-            background-color: orangered;
         }
         &--back{
-            background-color: goldenrod;
             transform: rotateY(-180deg);
         }
     }
