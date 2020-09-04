@@ -1,0 +1,27 @@
+.row {
+    max-width: $grid-width;
+    margin: 0 auto;
+    
+    &:not(:last-child){ //remove the bottom margin for the last child
+        margin-bottom: $gutter-vertical;
+    }
+    @include clear-fix;
+
+    [class^="col-"]{ //select all div with classname col-*** and apply these styles
+        float: left;
+        &:not(:last-child){ //remove the right margin for the last child in the row
+            margin-right: $gutter-horizontal;
+        }
+    }   
+
+    .col-1-of-3{
+        width: calc( (100% - 2*#{$gutter-horizontal}) / 3 );
+    }
+}
+.page{
+    margin: 20px;
+    height: 90vh;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.993);
+    @include shadow-normal;
+}
