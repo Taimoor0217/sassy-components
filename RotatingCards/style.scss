@@ -6,3 +6,34 @@
 @import "../utilities";
 @import "../layout";
 
+.card{
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 35rem;
+
+    &__side {
+        height: 35rem;
+        border-radius: 15px;
+        transition: all 0.8s;
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+
+        &--front{
+            background-color: orangered;
+        }
+        &--back{
+            background-color: goldenrod;
+            transform: rotateY(-180deg);
+        }
+    }
+    &:hover &__side--front{ 
+        transform: rotateY(180deg)
+    }
+    &:hover &__side--back{ 
+        transform: rotateY(0deg)
+    }
+}
